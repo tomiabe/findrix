@@ -904,8 +904,8 @@ button { font-family: var(--font); cursor: pointer; }
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--line);
   box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.08);
-  padding: 10px 16px;
-  gap: 8px;
+  padding: 12px 16px;
+  gap: 12px;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -913,6 +913,9 @@ button { font-family: var(--font); cursor: pointer; }
 .float-sort::-webkit-scrollbar { display: none; }
 
 .float-sort--on { display: flex; }
+
+.float-sort > span { display: flex; gap: 10px; flex-shrink: 0; }
+.float-sort .filter { white-space: nowrap; }
 
 /* ============ footer ============ */
 
