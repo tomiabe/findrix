@@ -535,8 +535,25 @@ function updateFilters() {
       ${k === "all" ? "All categories" : k} <span class="filter__count">${n}</span>
     </button>`).join("");
 
+  const floatStatus = $("#float-sort-status");
+  const floatCat = $("#float-sort-category");
+  if (floatStatus) floatStatus.innerHTML = statusBar.innerHTML;
+  if (floatCat) floatCat.innerHTML = catBar.innerHTML;
+
   applyFilters();
+  refreshFloatSort();
 }
+
+function refreshFloatSort() {
+  const floatSort = $("#float-sort");
+  const anchor = $("#filter-status");
+  if (!floatSort || !anchor) return;
+  if (window.innerWidth > 720) { floatSort.classList.remove("float-sort--on"); return; }
+  floatSort.classList.toggle("float-sort--on", anchor.getBoundingClientRect().bottom < 0);
+}
+
+window.addEventListener("scroll", refreshFloatSort, { passive: true });
+window.addEventListener("resize", refreshFloatSort);
 
 function applyFilters() {
   let visible = 0;
