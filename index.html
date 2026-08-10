@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI visibility audit | susinsight.com | findrix</title>
+  <meta name="description" content="AI visibility audit for susinsight.com. Verdict, a week 1 plan, and the full 30 point checklist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner container">
+      <div class="brand">
+        <img src="findrix-logo.png" alt="Findrix" height="20">
+      </div>
+
+      <span class="topbar__site"><span class="dot" aria-hidden="true"></span><span id="hero-site">susinsight.com</span></span>
+
+      <div class="topbar__actions">
+        <button class="switch" id="impl-toggle" type="button" aria-pressed="false" aria-label="Toggle implementation view">
+          <span class="switch__track" aria-hidden="true"></span>
+          <span class="switch-label">Implementation view</span>
+        </button>
+        <a class="btn btn--primary btn--small" href="#cta">Start onboarding</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page">
+
+    <div class="layout">
+
+      <div class="content">
+
+        <!-- verdict -->
+        <section class="hero">
+          <div>
+            <p class="eyebrow">AI visibility audit</p>
+            <h1>Susinsight is almost there.</h1>
+            <p class="hero__narrative" id="narrative"></p>
+            <div class="hero__meta">
+              <span class="meta-chip">30 checks</span>
+              <span class="meta-chip" id="hero-meta-date">August 9, 2026</span>
+              <span class="meta-chip" id="hero-meta-dur">Ran in 42s</span>
+              <span class="meta-chip">5 categories</span>
+            </div>
+          </div>
+
+          <div class="score">
+            <div class="score__ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00E07A"></stop>
+                    <stop offset="100%" stop-color="#00B25E"></stop>
+                  </linearGradient>
+                </defs>
+                <circle class="score__track" cx="60" cy="60" r="52"></circle>
+                <circle class="score__fill" id="score-fill" cx="60" cy="60" r="52" stroke="url(#ring-grad)"></circle>
+              </svg>
+              <div class="score__center">
+                <span class="score__num" id="score-num">0</span>
+                <span class="score__of">of 100</span>
+              </div>
+            </div>
+            <span class="score__verdict" id="score-verdict">Almost there</span>
+          </div>
+        </section>
+
+        <!-- categories -->
+        <section class="section" id="categories">
+          <div class="section__head">
+            <h2><span class="section__num">01</span>Score by category</h2>
+            <p class="section__sub">Where AI is reading you, one category at a time. Access and Schema carry the most weight.</p>
+          </div>
+          <div class="cats" id="cats"></div>
+        </section>
+
+        <!-- policy -->
+        <section class="policy">
+          <div class="policy__head">
+            <h2>The one policy question</h2>
+            <p>Decide this before the plan. Everything else follows.</p>
+          </div>
+          <div class="policy__body">
+            <p class="policy__q">Should Susinsight be quotable by ChatGPT, Claude, and Perplexity?</p>
+            <div class="seg">
+              <button class="seg__opt seg__opt--on" id="policy-yes" data-policy-opt="yes" type="button">
+                <span class="seg__opt-label"><span class="seg__dot" aria-hidden="true"></span>Yes, let them cite us</span>
+                <span class="seg__opt-desc">AI assistants read and cite your reporting. Training stays off through content signals. Your two Access P1s clear automatically.</span>
+              </button>
+              <button class="seg__opt" id="policy-no" data-policy-opt="no" type="button">
+                <span class="seg__opt-label"><span class="seg__dot" aria-hidden="true"></span>No, keep them blocked</span>
+                <span class="seg__opt-desc">AI crawlers stay out. The Access P1s become a deliberate choice, not a bug, and the score stays capped near the current tier.</span>
+              </button>
+            </div>
+            <p class="policy__note" id="policy-note"></p>
+          </div>
+        </section>
+
+        <!-- plan -->
+        <section class="section" id="plan">
+          <div class="section__head">
+            <h2><span class="section__num">02</span>Week 1 plan</h2>
+            <p class="section__sub">Three roles, nine actions. Tick them off; the list is saved on this device.</p>
+          </div>
+          <div class="plan__roles" id="plan-roles"></div>
+        </section>
+
+        <!-- gaps -->
+        <section class="section" id="gaps">
+          <div class="section__head">
+            <h2><span class="section__num">03</span>Where the score is stuck</h2>
+            <p class="section__sub">Seven gaps move the score fastest. Each has exactly one action.</p>
+          </div>
+          <div class="gaps" id="gaps"></div>
+        </section>
+
+        <!-- long term -->
+        <section class="section" id="longterm">
+          <div class="section__head">
+            <h2><span class="section__num">04</span>Brand signals, played long</h2>
+            <p class="section__sub">These take months, not sprints. They are not failures and they do not block the week 1 plan.</p>
+          </div>
+          <div class="longterm" id="longterm"></div>
+        </section>
+
+        <!-- checklist -->
+        <section class="section" id="checklist">
+          <div class="section__head">
+            <h2><span class="section__num">05</span>Full 30 point checklist</h2>
+            <p class="section__sub">Reference. Every check, grouped by category, with the why and the action. Turn on implementation view for code.</p>
+          </div>
+
+          <div class="filters">
+            <div class="filters" id="filter-status"></div>
+            <div class="filters" id="filter-category"></div>
+            <span style="flex:1"></span>
+            <button class="filter" id="expand-all" type="button">Expand all</button>
+            <button class="filter" id="collapse-all" type="button">Collapse all</button>
+          </div>
+
+          <div class="cat-groups" id="check-groups"></div>
+          <p class="section__sub" id="check-none" style="display:none;padding:20px 0">No checks match that filter.</p>
+        </section>
+
+      </div>
+
+      <!-- rail -->
+      <aside class="rail">
+        <div class="rail-card">
+          <p class="rail-card__title">Checks</p>
+          <div class="rail-stats">
+            <div class="rail-stat rail-stat--pass"><b id="stat-pass">0</b><span>Pass</span></div>
+            <div class="rail-stat rail-stat--warn"><b id="stat-warn">0</b><span>Partial</span></div>
+            <div class="rail-stat rail-stat--fail"><b id="stat-fail">0</b><span>Missing</span></div>
+          </div>
+          <p style="font-size:12px;color:#68736D;margin-top:12px">Probe method: live fetch using each bot User-Agent from our IP. Catches User-Agent filtering, not IP allowlists.</p>
+        </div>
+
+        <div class="rail-card rail-cta" id="cta">
+          <p class="eyebrow" style="color:#8FD8BE">Next step</p>
+          <h3>Turn these recommendations into a tracked plan.</h3>
+          <p>Weekly tracking across 7 AI engines. Every fix arrives written, and you approve what ships.</p>
+          <div class="rail-cta__btns">
+            <a class="btn btn--primary btn--wide" href="#">Start onboarding</a>
+            <a class="btn btn--ghost btn--wide" href="#">Download PDF</a>
+          </div>
+          <p class="rail-cta__fine">14 day free trial</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="brand">
+        <img src="findrix-logo.png" alt="Findrix" height="20">
+      </div>
+      <p>findrix.ai</p>
+    </div>
+  </footer>
+
+  <div class="bottombar">
+    <span class="bottombar__score"><span id="bottom-score">68</span>/100 &middot; Almost there</span>
+    <a class="btn btn--primary" href="#cta">Start onboarding</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
